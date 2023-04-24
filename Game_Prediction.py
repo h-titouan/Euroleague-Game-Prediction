@@ -90,7 +90,7 @@ with sl_col3:
                        value = "Average")
 
 data = pd.read_parquet('./assets/data.parquet.gzip')
-model = load('/assets/Model.joblib')
+model = load('Model.joblib')
 
 if st.button('Predict !', use_container_width=True):
 
