@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from joblib import load
 
 def advanced_data_prediction(data):
 
@@ -62,7 +63,9 @@ def advanced_data_prediction(data):
     return advanced_data
 
 
-def predict_matchup(HomeTeam, AwayTeam, CHomeFar, CHomePaint, CHomeAgressivity, CAwayFar, CAwayPaint, CAwayAgressivity, model, data): 
+def predict_matchup(HomeTeam, AwayTeam, CHomeFar, CHomePaint, CHomeAgressivity, CAwayFar, CAwayPaint, CAwayAgressivity, data): 
+
+    model = load('Model.joblib')
 
     TeamHome = data[(data['Team'] == HomeTeam) & (data['Top8'] == 1) ]
     TeamAway = data[(data['Adversaire'] == AwayTeam) & (data['Top8'] == 1)]

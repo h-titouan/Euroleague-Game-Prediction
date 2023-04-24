@@ -1,7 +1,6 @@
 import streamlit as st
 import utils as fct
 import pandas as pd
-from joblib import load
 
 st.title("Euroleague Playoff Prediction")
 
@@ -90,7 +89,6 @@ with sl_col3:
                        value = "Average")
 
 data = pd.read_parquet('./assets/data.parquet.gzip')
-model = load('Model.joblib')
 
 if st.button('Predict !', use_container_width=True):
 
@@ -133,7 +131,7 @@ if st.button('Predict !', use_container_width=True):
     proba0, proba1, pred = fct.predict_matchup(selected_option1, selected_option2, 
                                                coefficient[0], coefficient[0],
                                                 coefficient[1], coefficient[2],
-                                                coefficient[2], coefficient[3], model, data)
+                                                coefficient[2], coefficient[3], data)
 
     if pred == 1 :
         vainqueur = selected_option1
