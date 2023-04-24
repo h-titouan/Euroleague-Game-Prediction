@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import requests
 from PIL import Image
-from Courtside-Vision import predict_matchup
+from utils_module.Euroleague_Functions import predict_matchup
 import pandas as pd
 import matplotlib.pyplot as plt
 
