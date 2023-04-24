@@ -63,9 +63,7 @@ def advanced_data_prediction(data):
     return advanced_data
 
 
-def predict_matchup(HomeTeam, AwayTeam, CHomeFar, CHomePaint, CHomeAgressivity, CAwayFar, CAwayPaint, CAwayAgressivity, data): 
-
-    model = joblib.load('model.pkl')
+def predict_matchup(HomeTeam, AwayTeam, CHomeFar, CHomePaint, CHomeAgressivity, CAwayFar, CAwayPaint, CAwayAgressivity, data, model): 
 
     TeamHome = data[(data['Team'] == HomeTeam) & (data['Top8'] == 1) ]
     TeamAway = data[(data['Adversaire'] == AwayTeam) & (data['Top8'] == 1)]
