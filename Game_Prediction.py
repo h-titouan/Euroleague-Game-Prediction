@@ -29,8 +29,6 @@ logos = {
     "euroleague" : "./assets/euroleague.png"
 }
 
-model = load('./assets/Model.joblib')
-data = pd.read_parquet('./assets/data.parquet.gzip')
 
 # Coeff to predict : 
 Team = ["Olympiacos Piraeus", "FC Barcelona", "Real Madrid", "AS Monaco",
@@ -90,6 +88,9 @@ with sl_col3:
     AwayDefense = st.select_slider(label = "   ", label_visibility= 'collapsed',
                        options = ["Worst", "Badly", "Not very well", "Average", "Well", "Very well", "Best"],
                        value = "Average")
+
+data = pd.read_parquet('./assets/data.parquet.gzip')
+model = load('/assets/Model.joblib')
 
 if st.button('Predict !', use_container_width=True):
 
