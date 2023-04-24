@@ -1,4 +1,4 @@
 streamlit
 pandas
 numpy
-joblib
+joblib==1.2.0
