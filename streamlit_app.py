@@ -51,13 +51,13 @@ logo_euroleague = logos["euroleague"]
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.image(logo_filename1, width= 200)
+    st.image(logo_filename1, use_column_width=True)
 
 with col2:
-    st.image(vs, width= 200)
+    st.image(vs, use_column_width=True)
 # Display the second logo in the second column
 with col3:
-    st.image(logo_filename2, width=150)
+    st.image(logo_filename2, use_column_width=True)
 
 st.markdown("---")
 
