@@ -1,10 +1,7 @@
 import streamlit as st
-import json
-import requests
-from PIL import Image
-from utils_module.Euroleague_Functions import predict_matchup
+import utils as fct
 import pandas as pd
-import matplotlib.pyplot as plt
+from joblib import load
 
 st.title("Euroleague Playoff Prediction")
 
@@ -14,7 +11,7 @@ with T_col1:
     st.write("Author : Titouan Houde - Sport Data Scientist")
 
 with T_col2:
-    st.markdown("[LinkedIn](https://www.linkedin.com/in/titouan-houde/) / [Github](https://github.com/h-titouan)")
+    st.markdown("[LinkedIn](https://www.linkedin.com/in/titouan-houde/)")
 
 options = ["Olympiacos Piraeus", "FC Barcelona", "Real Madrid", "AS Monaco", 
            "Maccabi Playtika Tel Aviv", "Partizan Mozzart Bet Belgrade", "Zalgiris Kaunas", "Fenerbahce Beko Istanbul"]
@@ -30,8 +27,10 @@ logos = {
     "Fenerbahce Beko Istanbul" : "./assets/fener.png",
     "vs" : "./assets/vs.jpg",
     "euroleague" : "./assets/euroleague.png"
-
 }
+
+model = load('./assets/Model.joblib')
+data = pd.read_parquet('./assets/data.parquet.gzip')
 
 # Coeff to predict : 
 Team = ["Olympiacos Piraeus", "FC Barcelona", "Real Madrid", "AS Monaco",
@@ -130,10 +129,10 @@ if st.button('Predict !', use_container_width=True):
         else:  # "Best"
             coefficient.append(0.7)
 
-    proba0, proba1, pred = predict_matchup(selected_option1, selected_option2, 
+    proba0, proba1, pred = fct.predict_matchup(selected_option1, selected_option2, 
                                                coefficient[0], coefficient[0],
                                                 coefficient[1], coefficient[2],
-                                                coefficient[2], coefficient[3])
+                                                coefficient[2], coefficient[3], model, data)
 
     if pred == 1 :
         vainqueur = selected_option1
