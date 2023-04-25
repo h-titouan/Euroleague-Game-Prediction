@@ -7,10 +7,10 @@ st.title("Euroleague Playoffs Prediction")
 T_col1, T_col2 = st.columns([2, 1])
 
 with T_col1:
-    st.write("Author : Titouan Houde - Sport Data Scientist")
+    st.write("Author : Titouan Houde - Sport Data Scientist & Assistant Coach Monaco U21")
 
 with T_col2:
-    st.markdown("About me : [LinkedIn](https://www.linkedin.com/in/titouan-houde/)")
+    st.markdown("[LinkedIn](https://www.linkedin.com/in/titouan-houde/)")
 
 options = ["AS Monaco", "Maccabi Playtika Tel Aviv",  "Real Madrid", "Partizan Mozzart Bet Belgrade",
             "FC Barcelona", "Zalgiris Kaunas",  "Olympiacos Piraeus", "Fenerbahce Beko Istanbul"]
