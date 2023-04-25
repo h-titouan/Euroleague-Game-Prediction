@@ -7,7 +7,7 @@ st.title("Euroleague Playoffs Prediction")
 T_col1, T_col2 = st.columns([2, 1])
 
 with T_col1:
-    st.write("Author : Titouan Houde - Sport Data Scientist & Assistant Coach Monaco U21")
+    st.write("Titouan Houde - Sport Data Scientist & Assistant Coach Monaco U21")
 
 with T_col2:
     st.markdown("[LinkedIn](https://www.linkedin.com/in/titouan-houde/)")
