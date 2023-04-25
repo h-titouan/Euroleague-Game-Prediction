@@ -2,7 +2,7 @@ import streamlit as st
 import utils as fct
 import pandas as pd
 
-st.title("Euroleague Playoff Prediction")
+st.title("Euroleague Playoffs Prediction")
 
 T_col1, T_col2 = st.columns([2, 1])
 
