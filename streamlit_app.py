@@ -12,17 +12,17 @@ with T_col1:
 with T_col2:
     st.markdown("About me : [LinkedIn](https://www.linkedin.com/in/titouan-houde/)")
 
-options = ["Olympiacos Piraeus", "FC Barcelona", "Real Madrid", "AS Monaco", 
-           "Maccabi Playtika Tel Aviv", "Partizan Mozzart Bet Belgrade", "Zalgiris Kaunas", "Fenerbahce Beko Istanbul"]
+options = ["AS Monaco", "Maccabi Playtika Tel Aviv",  "Real Madrid", "Partizan Mozzart Bet Belgrade",
+            "FC Barcelona", "Zalgiris Kaunas",  "Olympiacos Piraeus", "Fenerbahce Beko Istanbul"]
 
 logos = {
-    "Olympiacos Piraeus" : "./assets/olympiacos.png",
-    "FC Barcelona": "./assets/barcelona.png",
-    "Real Madrid": "./assets/real_madrid.png",
     "AS Monaco" : "./assets/monaco.png",
     "Maccabi Playtika Tel Aviv" : "./assets/maccabi.png",
+    "Real Madrid": "./assets/real_madrid.png",
     "Partizan Mozzart Bet Belgrade" : "./assets/partizan.png",
+    "FC Barcelona": "./assets/barcelona.png",
     "Zalgiris Kaunas" : "./assets/zalgiris.png",
+    "Olympiacos Piraeus" : "./assets/olympiacos.png",
     "Fenerbahce Beko Istanbul" : "./assets/fener.png",
     "vs" : "./assets/vs.jpg",
     "euroleague" : "./assets/euroleague.png"
@@ -30,8 +30,8 @@ logos = {
 
 
 # Coeff to predict : 
-Team = ["Olympiacos Piraeus", "FC Barcelona", "Real Madrid", "AS Monaco",
-         "Maccabi Playtika Tel Aviv", "Partizan Mozzart Bet Belgrade", "Zalgiris Kaunas", "Fenerbahce Beko Istanbul"]
+Team = ["AS Monaco",  "Maccabi Playtika Tel Aviv",  "Real Madrid",  "Partizan Mozzart Bet Belgrade", 
+        "FC Barcelona", "Zalgiris Kaunas", "Olympiacos Piraeus", "Fenerbahce Beko Istanbul"]
 
 st.write("")
 selected_option1 = st.selectbox("Select a Home Team :", options)
