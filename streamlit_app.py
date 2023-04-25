@@ -10,7 +10,7 @@ with T_col1:
     st.write("Author : Titouan Houde - Sport Data Scientist")
 
 with T_col2:
-    st.markdown("[LinkedIn](https://www.linkedin.com/in/titouan-houde/)")
+    st.markdown("About me : [LinkedIn](https://www.linkedin.com/in/titouan-houde/)")
 
 options = ["Olympiacos Piraeus", "FC Barcelona", "Real Madrid", "AS Monaco", 
            "Maccabi Playtika Tel Aviv", "Partizan Mozzart Bet Belgrade", "Zalgiris Kaunas", "Fenerbahce Beko Istanbul"]
